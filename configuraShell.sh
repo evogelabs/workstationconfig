@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export ZSH=""
+
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 cd ~/.oh-my-zsh/custom/themes/
