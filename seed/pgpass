@@ -1,0 +1,5 @@
+localhost:15432:keycloak:keycloak:keycloak
+localhost:15433:evoge:evoge:evoge
+localhost:5432:*:evoge_user:evoge_pass
+localhost:5432:postgres:postgres:evoge_pass
+
