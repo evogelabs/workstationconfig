@@ -8,10 +8,10 @@ if [ -z $1 ] || [ -z $2 ]; then
 fi
 
 echo "Finalizando todas as conexões do banco de dados $1"
-killAllPostgresConnections.sh $1
+killAllPostgresConnections.sh $1 $3
 
 echo "Restaurando o schema public do banco de dados $1 a partir do arquivo $2"
 pg_restore --verbose --clean --if-exists --no-acl --no-owner \
-    -h localhost -U evoge_user -d $1 \
+    -h localhost -U evoge_user -p $3 -d $1 \
     -n public \
     -x --no-owner --role=evoge_user $2

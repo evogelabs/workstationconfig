@@ -13,4 +13,4 @@ FROM
 	pg_stat_activity
 WHERE
 	pg_stat_activity.datname = 'database_name'
-	AND pid <> pg_backend_pid();" | psql -h localhost -U evoge_user -d $1
+	AND pid <> pg_backend_pid();" | psql -h localhost -U evoge_user -d $1 -p $2

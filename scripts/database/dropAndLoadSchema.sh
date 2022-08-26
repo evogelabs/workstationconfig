@@ -12,5 +12,5 @@ killAllPostgresConnections.sh $1
 
 echo "Restaurando o arquivo $2 para o banco de dados $1"
     pg_restore --verbose --clean --if-exists --no-acl --no-owner \
-        -h localhost -U evoge_user -d $1 \
+        -h localhost -U evoge_user -p $3 -d $1 \
         -x --no-owner --role=evoge_user $2

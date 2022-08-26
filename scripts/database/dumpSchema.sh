@@ -16,4 +16,4 @@ PORT="5432"
 USER="evoge_user"
 
 echo "Dump $2"
-pg_dump -h $HOST -p $PORT -U $USER -d $1 --schema=$2 -F c -f ${2}_${DATA}.backup
+pg_dump -h $HOST -p $PORT -U $USER -d $1 -p$3 --schema=$2 -F c -f ${2}_${DATA}.backup
