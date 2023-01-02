@@ -8,7 +8,7 @@ test -e "$HOME/.github.zsh" && source "$HOME/.github.zsh"
 
 # Meus scripts
 SCRIPTS_DIR="$HOME/workstationconfig/scripts"
-export PATH="$PATH:$SCRIPTS_DIR/connections:$SCRIPTS_DIR/database:$SCRIPTS_DIR/dev:$SCRIPTS_DIR/docker:$SCRIPTS_DIR/gcp"
+export PATH="$PATH:/usr/local/opt/postgresql@15/bin:$SCRIPTS_DIR/connections:$SCRIPTS_DIR/database:$SCRIPTS_DIR/dev:$SCRIPTS_DIR/docker:$SCRIPTS_DIR/gcp"
 
 case "$(uname -s)" in
   Darwin)
@@ -20,9 +20,9 @@ case "$(uname -s)" in
       compinit
     fi
     # Node
-    export PATH="/usr/local/opt/node@16/bin:$PATH"
-    export LDFLAGS="-L/usr/local/opt/node@16/lib"
-    export CPPFLAGS="-I/usr/local/opt/node@16/include"
+    export PATH="/usr/local/opt/node@18/bin:$PATH"
+    export LDFLAGS="-L/usr/local/opt/node@18/lib"
+    export CPPFLAGS="-I/usr/local/opt/node@18/include"
   ;;
 
   Linux)

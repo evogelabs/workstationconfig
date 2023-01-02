@@ -468,10 +468,10 @@
 
 spring init -d=web \
     --artifactId="$1" \
-    --bootVersion=2.7.3 \
+    --bootVersion=3.0.0 \
     --description="Gerado automaticamente" \
     --groupId="br.com.evoge" \
-    --javaVersion=18 \
+    --javaVersion=17 \
     --language="kotlin" \
     --name="$1" \
     --packageName="br.com.evoge" \
